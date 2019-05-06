@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
 
 <body>
     <div class="container">
@@ -15,179 +16,194 @@
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
                         <h3><i class="material-icons">format_list_bulleted</i> Survey Questions</h3>
-                    <hr>
-                        <div class="row">
-                            <form>
-                                <div class="row">
-                                    <div class="input-field col s6">
-                                        <i class="material-icons prefix">account_circle</i>
-                                        <input id="icon_prefix" type="text" class="validate">
-                                        <label for="icon_prefix">Name (required)</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s6">
-                                        <i class="material-icons prefix">camera</i>
-                                        <input id="icon_telephone" type="tel" class="validate">
-                                        <label for="icon_telephone">Link to Photo (required)</label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                         <hr>
-                        <div class="row">
-                            <h4>Question 1</h4>
-                            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
-                            <div class="input-field col s4">
-                                <select>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">1 (strongly disagree)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (strongly agree)</option>
-                                </select>
+
+                        <!-- Start Form -->
+                        <form>
+                            <div class="row">
+                                <div class="input-field col s12 l6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="name" type="text">
+                                    <label for="name">Name (required)</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h4>Question 2</h4>
-                            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
-                            <div class="input-field col s4">
-                                <select>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">1 (strongly disagree)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (strongly agree)</option>
-                                </select>
+                            <div class="row">
+                                <div class="input-field col s12 l6">
+                                    <i class="material-icons prefix">camera</i>
+                                    <input id="photo" type="text">
+                                    <label for="photo">Link to Photo (required)</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h4>Question 3</h4>
-                            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
-                            <div class="input-field col s4">
-                                <select>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">1 (strongly disagree)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (strongly agree)</option>
-                                </select>
+                            <hr>
+                            <div class="row">
+                                <h4>Question 1</h4>
+                                <h6>I feel uncomfortable when I disagree with someone</h6>
+                                <div class="input-field col s12 l4">
+                                    <select id="question1">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">1 (strongly disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (strongly agree)</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h4>Question 4</h4>
-                            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
-                            <div class="input-field col s4">
-                                <select>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">1 (strongly disagree)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (strongly agree)</option>
-                                </select>
+                            <div class="row">
+                                <h4>Question 2</h4>
+                                <h6>I have a vivid imagination</h6>
+                                <div class="input-field col s12 l4">
+                                    <select id="question2">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">1 (strongly disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (strongly agree)</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h4>Question 5</h4>
-                            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
-                            <div class="input-field col s4">
-                                <select>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option class="black-text" value="1">1 (strongly disagree)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (strongly agree)</option>
-                                </select>
+                            <div class="row">
+                                <h4>Question 3</h4>
+                                <h6>I prefer to follow a schedule</h6>
+                                <div class="input-field col s12 l4">
+                                    <select id="question3">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">1 (strongly disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (strongly agree)</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h4>Question 6</h4>
-                            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
-                            <div class="input-field col s4">
-                                <select>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">1 (strongly disagree)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (strongly agree)</option>
-                                </select>
+                            <div class="row">
+                                <h4>Question 4</h4>
+                                <h6>I enjoy being the center of attention</h6>
+                                <div class="input-field col s12 l4">
+                                    <select id="question4">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">1 (strongly disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (strongly agree)</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h4>Question 7</h4>
-                            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
-                            <div class="input-field col s4">
-                                <select>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">1 (strongly disagree)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (strongly agree)</option>
-                                </select>
+                            <div class="row">
+                                <h4>Question 5</h4>
+                                <h6>It is important to me to follow traditions</h6>
+                                <div class="input-field col s12 l4">
+                                    <select id="question5">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option class="black-text" value="1">1 (strongly disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (strongly agree)</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h4>Question 8</h4>
-                            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
-                            <div class="input-field col s4">
-                                <select>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">1 (strongly disagree)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (strongly agree)</option>
-                                </select>
+                            <div class="row">
+                                <h4>Question 6</h4>
+                                <h6>I sympathize with the homeless</h6>
+                                <div class="input-field col s12 l4">
+                                    <select id="question6">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">1 (strongly disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (strongly agree)</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h4>Question 9</h4>
-                            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
-                            <div class="input-field col s4">
-                                <select>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">1 (strongly disagree)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (strongly agree)</option>
-                                </select>
+                            <div class="row">
+                                <h4>Question 7</h4>
+                                <h6>I have trouble controlling my impulses</h6>
+                                <div class="input-field col s12 l4">
+                                    <select id="question7">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">1 (strongly disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (strongly agree)</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h4>Question 10</h4>
-                            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
-                            <div class="input-field col s4">
-                                <select>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">1 (strongly disagree)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (strongly agree)</option>
-                                </select>
+                            <div class="row">
+                                <h4>Question 8</h4>
+                                <h6>I think about why people do the things they do</h6>
+                                <div class="input-field col s12 l4">
+                                    <select id="question8">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">1 (strongly disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (strongly agree)</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="card-action">
-                        <button class="btn waves-effect grey" type="submit" name="action">Submit
-                            <i class="material-icons right">send</i>
-                        </button>
+                            <div class="row">
+                                <h4>Question 9</h4>
+                                <h6>Being around lots of people energizes me</h6>
+                                <div class="input-field col s12 l4">
+                                    <select id="question9">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">1 (strongly disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (strongly agree)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h4>Question 10</h4>
+                                <h6>I avoid being alone</h6>
+                                <div class="input-field col s12 l4">
+                                    <select id="question10">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">1 (strongly disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (strongly agree)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="card-action">
+                                <button class="btn waves-effect grey" type="submit" name="action" id="submit">Submit
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Links to friends and GitHub -->
         <div class="row">
             <div class="col s12">
                 <a href="/api/friends">API Friends List</a> |
                 <a href="https://github.com/mountainflow/friend-finder">GitHub Repo</a>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4 id="best-name"></h4>
+                <img id="best-image">
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
             </div>
         </div>
     </div>
@@ -200,6 +216,42 @@
     <script type='text/javascript'>
         $(document).ready(function () {
             $('select').formSelect();
+            $('.modal').modal();
+
+            $('#submit').on('click', function (event) {
+                event.preventDefault();
+
+                // Variable to hold the users answers
+                let user = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#question1").val(),
+                        $("#question2").val(),
+                        $("#question3").val(),
+                        $("#question4").val(),
+                        $("#question5").val(),
+                        $("#question6").val(),
+                        $("#question7").val(),
+                        $("#question8").val(),
+                        $("#question9").val(),
+                        $("#question10").val()
+                    ]
+                };
+
+                // AJAX post the data to the friends API.
+                $.post("/api/friends", user, function (data) {
+                    console.log(data);
+
+                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                    $("#best-name").text(data.name);
+                    $("#best-image").attr("src", data.photo);
+
+                    // Show the modal
+                    $('.modal').modal('open');
+                });
+            });
+
         });
     </script>
 </body>

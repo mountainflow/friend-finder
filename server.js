@@ -1,22 +1,16 @@
 const express = require('express');
-const path = require('path');
-// Sets up the Express App=================================
 const app = express();
 // process.env.PORT lets the port be set by Heroku=========
 var PORT = process.env.PORT || 3000;
 
+app.use(express.urlencoded({
+    extended: true
+}));
+app.use(express.json());
 
-//=========================================================
-// Just testing stuff======================================
-
-app.get('/:id', function (req, res) {
-    res.send(req.params.id);
-});
-
-
-// End Just testing stuff======================================
-//=========================================================
-
+// Points the server to the api and html routes
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 // Starts the server to begin listening====================
 app.listen(PORT, function () {
