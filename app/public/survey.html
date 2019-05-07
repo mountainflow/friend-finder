@@ -213,6 +213,8 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
     </script>
+
+    <!-- Main script for collecting and posting data -->
     <script type='text/javascript'>
         $(document).ready(function () {
             $('select').formSelect();
@@ -241,15 +243,17 @@
 
                 // AJAX post the data to the friends API.
                 $.post("/api/friends", user, function (data) {
-                    console.log(data);
+                    console.log("This is data from survey page: " + data);
 
                     // Grab the result from the AJAX post so that the best match's name and photo are displayed.
                     $("#best-name").text(data.name);
                     $("#best-image").attr("src", data.photo);
 
-                    // Show the modal
-                    $('.modal').modal('open');
                 });
+                // Show the modal
+                $('#modal1').modal('open');
+                // Clears form
+                location.reload();
             });
 
         });
