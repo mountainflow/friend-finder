@@ -203,7 +203,7 @@
                 <img id="best-image">
             </div>
             <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="close">Close</a>
             </div>
         </div>
     </div>
@@ -218,7 +218,9 @@
     <script type='text/javascript'>
         $(document).ready(function () {
             $('select').formSelect();
-            $('.modal').modal();
+            $('.modal').modal({
+                dismissible: false
+            });
 
             $('#submit').on('click', function (event) {
                 event.preventDefault();
@@ -243,19 +245,24 @@
 
                 // AJAX post the data to the friends API.
                 $.post("/api/friends", user, function (data) {
-                    console.log("This is data from survey page: " + data);
 
-                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                    // Display best match to the modal
                     $("#best-name").text(data.name);
-                    $("#best-image").attr("src", data.photo);
+                    $("#best-image").attr({
+                        src: data.photo,
+                        width: 360
+                    });
 
                 });
                 // Show the modal
                 $('#modal1').modal('open');
-                // Clears form
-                location.reload();
             });
 
+            // Close modal and reload page
+            $('#close').on('click', function (event) {
+                event.preventDefault();
+                location.reload();
+            });
         });
     </script>
 </body>

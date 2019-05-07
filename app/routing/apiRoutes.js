@@ -16,22 +16,18 @@ module.exports = function (app) {
         let differences = {
             scores: []
         };
-
         let finalArray = [];
 
         for (let i = 0; i < friends.length; i++) {
-
             for (let j = 0; j < friends[i].scores.length; j++) {
                 differences.scores.push(Math.abs(newUser.scores[j] - friends[i].scores[j]));
             }
             let diff = differences.scores.reduce(function (total, num) {
                 return Number(total) + Number(num);
             }, 0);
-
-            // console.log('\nDifferences 01 :\n' + JSON.stringify(differences) + '\n');
-
+            // Clears the differences array
             differences.scores.length = 0;
-
+            // Pushes the sum of differences into finalArray
             finalArray.push(diff);
         }
 
@@ -45,28 +41,12 @@ module.exports = function (app) {
             }
         }
 
-        console.log('\nIndex: ' + index);
-
-        console.log('\nBest Match : ' + JSON.stringify(friends[index]));
-
         let bestMatch = friends[index];
-
-
-
-        // console.log('\nDifferences :\n' + JSON.stringify(differences) + '\n');
-
-        console.log('finalArray: ' + JSON.stringify(finalArray));
 
         // Push the newUser to friends with all scores changed to integers
         friends.push(newUser);
 
-        console.log(friends);
-
-
-
-
         res.json(bestMatch);
-
 
     });
 };
