@@ -40,7 +40,6 @@ module.exports = function (app) {
                 index = i;
             }
         }
-
         let bestMatch = friends[index];
 
         // Push the newUser to friends with all scores changed to integers

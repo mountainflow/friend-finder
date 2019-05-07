@@ -23,14 +23,14 @@
                             <div class="row">
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">account_circle</i>
-                                    <input id="name" type="text">
+                                    <input id="name" type="text" class="validate" required>
                                     <label for="name">Name (required)</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 l6">
                                     <i class="material-icons prefix">camera</i>
-                                    <input id="photo" type="text">
+                                    <input id="photo" type="text" class="validate" required>
                                     <label for="photo">Link to Photo (required)</label>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@
                                 <h4>Question 1</h4>
                                 <h6>I feel uncomfortable when I disagree with someone</h6>
                                 <div class="input-field col s12 l4">
-                                    <select id="question1">
+                                    <select id="question1" required>
                                         <option value="" disabled selected>Choose your option</option>
                                         <option value="1">1 (strongly disagree)</option>
                                         <option value="2">2</option>
