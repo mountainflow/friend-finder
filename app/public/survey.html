@@ -247,12 +247,22 @@
                 $.post("/api/friends", user, function (data) {
 
                     // Display best match to the modal
-                    $("#best-name").text(data.name);
-                    $("#best-image").attr({
-                        src: data.photo,
-                        width: 360
-                    });
-
+                    if (!data.name) {
+                        $("#best-name").text('Anonymous');
+                    } else {
+                        $("#best-name").text(data.name);
+                    }
+                    if (!data.photo) {
+                        $("#best-image").attr({
+                            src: "https://img.wonderhowto.com/img/26/46/63686855758540/0/secure-your-identity-become-anonymous-online-2019.1280x600.jpg",
+                            width: 360
+                        });
+                    } else {
+                        $("#best-image").attr({
+                            src: data.photo,
+                            width: 360
+                        });
+                    }
                 });
                 // Show the modal
                 $('#modal1').modal('open');
