@@ -13,7 +13,7 @@ module.exports = function (app) {
         let numConverted = newUser.scores.map(Number);
         newUser.scores = numConverted;
 
-        let differences = {
+        let differences = { // Didn't need to make this an object
             scores: []
         };
         let finalArray = [];
